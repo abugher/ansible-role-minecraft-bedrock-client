@@ -1,0 +1,14 @@
+---
+install_files:
+  - owner:                      'root'
+    group:                      'root'
+    mode:                       '0644'
+    src:                        'files/minecraft-linux.asc'
+    dest:                       '/etc/apt/trusted.gpg.d/minecraft-linux.asc'
+  - owner:                      'root'
+    group:                      'root'
+    mode:                       '0644'
+    src:                        'files/minecraft-linux.list'
+    dest:                       '/etc/apt/sources.list.d/minecraft-linux.list'
+install_packages:
+  - 'mcpelauncher-manifest'
