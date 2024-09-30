@@ -11,4 +11,5 @@ install_files:
     src:                        'files/minecraft-linux.list'
     dest:                       '/etc/apt/sources.list.d/minecraft-linux.list'
 install_packages:
+  - 'mcpelauncher-manifest'
   - 'mcpelauncher-ui-manifest'
