@@ -1,15 +1,22 @@
 ---
+source_url:                     'https://minecraft-linux.github.io/pkg/deb'
+source_suites:
+  - "{{ debian_release_name|default(os_release_name) }}"
+source_components:
+  - 'main'
+keyring_file:                   '/usr/share/keyrings/minecraft-linux.github.io.asc'
 install_files:
   - owner:                      'root'
     group:                      'root'
     mode:                       '0644'
-    src:                        'files/minecraft-linux.asc'
-    dest:                       '/etc/apt/trusted.gpg.d/minecraft-linux.asc'
+    src:                        'files/minecraft-linux.github.io.asc'
+    dest:                       "{{ keyring_file }}"
+template_files:
   - owner:                      'root'
     group:                      'root'
     mode:                       '0644'
-    src:                        'files/minecraft-linux.list'
-    dest:                       '/etc/apt/sources.list.d/minecraft-linux.list'
+    src:                        'templates/minecraft-linux.github.io.list.j2'
+    dest:                       '/etc/apt/sources.list.d/minecraft-linux.github.io.list'
 install_packages:
   - 'mcpelauncher-manifest'
   - 'mcpelauncher-ui-manifest'
