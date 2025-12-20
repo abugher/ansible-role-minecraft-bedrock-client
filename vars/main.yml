@@ -15,8 +15,8 @@ template_files:
   - owner:                      'root'
     group:                      'root'
     mode:                       '0644'
-    src:                        'templates/minecraft-linux.github.io.list.j2'
-    dest:                       '/etc/apt/sources.list.d/minecraft-linux.github.io.list'
+    src:                        'templates/minecraft-linux.github.io.sources.j2'
+    dest:                       '/etc/apt/sources.list.d/minecraft-linux.github.io.sources'
 install_packages:
   - 'mcpelauncher-manifest'
   - 'mcpelauncher-ui-manifest'
