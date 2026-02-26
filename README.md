@@ -15,4 +15,4 @@ typically configured server.
 
 Instructions to set up the repo were found here:
 
-  https://github.com/minecraft-linux/pkg
+<https://github.com/minecraft-linux/pkg>
